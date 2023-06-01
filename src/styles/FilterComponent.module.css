@@ -1,0 +1,67 @@
+:root.root {
+  --mobile: 500px;
+  --tablet-max: 1023px;
+  --desktop: 1024px;
+  --chart-desk: 801px;
+  --chart-mobile-max: 800px;
+}
+.container {
+  display: flex;
+  height: 32px;
+  position: relative;
+
+  @media (max-width: var(--mobile)) {
+    width: 100%;
+  }
+
+  @media (min-width: var(--tablet-max)) and (max-width: var(--desktop)) {
+    width: 100%;
+  }
+}
+
+.select {
+  height: 100%;
+  min-width: 55px;
+  border: 1px solid transparent;
+  border-right: none;
+  border-radius: 10px 0px 0px 10px;
+  padding: 5px;
+
+  @media (max-width: var(--tablet-max)) {
+    width: 30%;
+    max-width: 110px;
+  }
+}
+
+.searchField {
+  width: 200px;
+  height: 100%;
+  padding: 0 5px 0 16px;
+  border-radius: 0px;
+
+  @media (max-width: var(--mobile)) {
+    width: 60%;
+  }
+}
+
+.clearButton {
+  height: 100%;
+  width: 32px;
+  min-width: 21px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: none;
+  background-color: #0bc5ea;
+  border-radius: 0px 10px 10px 0px;
+  cursor: pointer;
+
+  @media (max-width: var(--mobile)) {
+    width: 10%;
+  }
+}
+
+.clearButton:hover {
+  opacity: 0.5;
+}
